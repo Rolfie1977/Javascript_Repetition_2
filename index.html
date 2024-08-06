@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript Øvelser</title>
-  </head>
-  <body></body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Javascript Øvelser</title>
+
+    <style>
+      body {
+          display: flex;
+          flex-wrap: wrap;
+          height: 100vh;
+          margin: 0;
+      }
+      .box {
+          width: 50%;
+          height: 50%;
+          box-sizing: border-box;
+          border: 1px solid black;
+      }
+  </style>
+		<script src="Javascript/lektion_1.js" defer></script>
+	</head>
+	<body>
+		<h1>JavaScript Øvelser</h1>
+		<button id="clickButton">Click me!</button>
+		<p>Antal af klik: <span id="clickCount">0</span></p>
+
+		<!-- Input Felt med Validering -->
+
+		<input
+			type="text"
+			id="inputField"
+			placeholder="Indtast mindst 8 bogstaver"
+		/>
+		<p id="error-message" style="color: red; display: none">
+			Indtast mindst 8 bogstaver.
+		</p>
+
+     <!-- Firkant Farveskift -->
+     <div class="box" id="box1"></div>
+     <div class="box" id="box2"></div>
+     <div class="box" id="box3"></div>
+     <div class="box" id="box4"></div>
+     
+	</body>
 </html>
