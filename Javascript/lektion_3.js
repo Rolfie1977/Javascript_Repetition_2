@@ -7,6 +7,34 @@
 // Start med at lave en <div> som du henter ind i dit script med en getElementById metode.
 // Du skal i første omgang loope igennem alle indexes i arrayet og vise alle produkterne i din div.
 // Produkterne skal opstilles i et css grid eller en flexbox, med pris, billede, produkt navn, antal og popularitet (0-10).
+import { storeProducts } from "./storeProducts.js";
+
+// Hent div'en hvor produkterne skal vises
+const productDisplay = document.getElementById("productDisplay");
+
+// Funktion til at skabe produktets HTML struktur
+function createProductHTML(product) {
+	return `
+        <div class="product" onclick="addToCart('${product.title}')">
+            <img src="${product.image}" alt="${product.title}">
+            <h2>${product.title}</h2>
+            <p>Pris: ${product.price} kr.</p>
+            <p>Antal: ${product.quantity}</p>
+            <p>Popularitet: ${product.popularity}/10</p>
+        </div>
+    `;
+}
+
+// Loop igennem alle produkterne og tilføj dem til div'en
+storeProducts.forEach((product) => {
+	productDisplay.innerHTML += createProductHTML(product);
+});
+
+// Funktion til at tilføje et produkt til kurven
+function addToCart(productName) {
+	alert(`Du har tilføjet "${productName}" til din kurv.`);
+}
+
 //________________________________________________________________________________________
 
 // Opgave 2

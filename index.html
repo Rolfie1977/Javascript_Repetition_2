@@ -5,7 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Javascript Øvelser</title>
 
-		<script src="Javascript/lektion_2.js" defer></script>
+		<style>
+			.product-container {
+				display: flex; /* Eller 'grid' afhængig af din præference */
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+			.product {
+				border: 1px solid #ccc;
+				padding: 10px;
+				width: 200px;
+			}
+			.product img {
+				max-width: 100%;
+			}
+		</style>
+
+		<script src="Javascript/storeProducts.js" type="module" defer></script>
+		<script src="Javascript/lektion_3.js" type="module" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<div id="productDisplay" class="product-container"></div>
+	</body>
 </html>
